@@ -18,7 +18,7 @@ RUN apt-get install -y software-properties-common python-software-properties \
         && phpenmod mcrypt \
         && service apache2 restart \
         && curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer \
-        && curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash - | apt-get install -y nodejs npm
+        && curl -sL https://deb.nodesource.com/setup_8.x | bash - | apt-get install -y nodejs npm
 
 RUN apt-get purge -y --auto-remove software-properties-common python-software-properties \
         && apt-get autoremove -y \
